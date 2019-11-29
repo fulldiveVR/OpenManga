@@ -306,7 +306,7 @@ public class SettingsActivity2 extends BaseAppActivity implements AdapterView.On
                         .show();
                 return true;
             case "update":
-                new CheckUpdatesTask(this).attach(this).start();
+//                new CheckUpdatesTask(this).attach(this).start();
                 return true;
             case "sync.start":
                 SyncService.start(this);
