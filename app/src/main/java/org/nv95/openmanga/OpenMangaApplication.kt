@@ -4,6 +4,7 @@ import android.app.Application
 import android.content.res.Resources
 import android.preference.PreferenceManager
 import android.text.TextUtils
+import com.fulldive.eventsender.lib.EventSender
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -66,6 +67,8 @@ class OpenMangaApplication : Application() {
         Timber.plant(OpenMangaLogTree())
 
         WorkerLauncher.runAll()
+
+        EventSender.getInstance(this) // initialize
     }
 
     companion object {

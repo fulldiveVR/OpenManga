@@ -1,5 +1,6 @@
 package org.nv95.openmanga.feature.main;
 
+import com.fulldive.eventsender.lib.EventSender;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
@@ -296,6 +297,18 @@ public class MainActivity extends BaseAppActivity implements
         ChangesObserver.getInstance().removeListener(this);
         mListModeHelper.disable();
         super.onDestroy();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        EventSender.getInstance(getApplicationContext()).onStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        EventSender.getInstance(getApplicationContext()).onStop(this);
     }
 
     @Override
