@@ -78,7 +78,7 @@ android {
             def nameSuff = variant.buildType.versionNameSuffix == null ? variant.versionName
                     : variant.versionName.replace(variant.buildType.versionNameSuffix, "")
 
-            output.outputFileName = "openmanga-${variant.name}-${nameSuff}.apk"
+            output.outputFileName = "MoneyManga-${variant.name}-${nameSuff}.apk"
         }
     }
 
