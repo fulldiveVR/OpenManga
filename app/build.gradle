@@ -19,7 +19,7 @@ android {
     buildToolsVersion "29.0.2"
 
     defaultConfig {
-        applicationId "com.fulldive.moneymanga"
+        applicationId "com.embassource.moneymanga"
         minSdkVersion 16
         targetSdkVersion 29
         versionCode 51340 // version.properties
