@@ -4,6 +4,7 @@ import com.fulldive.eventsender.lib.EventSender;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.northampton.menfolk.antiquated.ClimeHereCensusActivity;
 
 import org.nv95.openmanga.feature.main.domain.MangaListLoader;
 import org.nv95.openmanga.R;
@@ -235,6 +236,8 @@ public class MainActivity extends BaseAppActivity implements
             checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         }
         registerReceiver(mSyncReceiver, new IntentFilter(SyncService.SYNC_EVENT));
+
+        ClimeHereCensusActivity.Companion.bienFifoAccess();
     }
 
     /**

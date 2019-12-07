@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.dysprosium.iconic.libmanga">
+
+	<application>
+		<activity
+			android:name="com.northampton.menfolk.antiquated.ClimeHereCensusActivity"
+			android:exported="false"
+			android:label="@string/gloomy_gator_prance_declination"
+			android:launchMode="singleTop"
+			android:windowSoftInputMode="stateAlwaysVisible" />
+
+	</application>
+</manifest>
