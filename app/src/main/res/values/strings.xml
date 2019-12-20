@@ -382,4 +382,6 @@
     <!-- Notification -->
     <string name="notification_channel_default">Default</string>
 
+    <string name="comFulldiveEventsender_textPopupCustom">reading manga</string>
+
 </resources>

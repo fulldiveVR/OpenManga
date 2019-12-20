@@ -5,6 +5,7 @@ import android.content.res.Resources
 import android.preference.PreferenceManager
 import android.text.TextUtils
 import com.fulldive.eventsender.lib.EventSender
+import com.fulldive.eventsender.lib.EventSenderConfig
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -68,6 +69,10 @@ class OpenMangaApplication : Application() {
 
         WorkerLauncher.runAll()
 
+        // setup
+        EventSenderConfig.apply {
+            textPopupCustom = R.string.comFulldiveEventsender_textPopupCustom
+        }
         EventSender.getInstance(this) // initialize
     }
 
