@@ -53,7 +53,7 @@
 
 # проект
 #-dontobfuscate
--keep,includedescriptorclasses class org.nv95.openmanga.** { *; }
+#-keep,includedescriptorclasses class org.nv95.openmanga.** { *; }
 
 -keep @JvmOverloads class * {
   <init>(...);
