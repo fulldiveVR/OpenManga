@@ -20,7 +20,45 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+-keepclassmembernames class kotlinx.** {
+    volatile <fields>;
+}
 
+-keep class kotlin.reflect.jvm.internal.ReflectionFactoryImpl { *; }
+# gson
+-keepattributes *Annotation*
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+-keepclassmembers,allowobfuscation class * {
+  @com.google.gson.annotations.SerializedName <fields>;
+}
+
+# Нужно чтобы библиотечные методы не были обфусцированы
+# Только удаление не используемого кода
+# так же поправлены большинство note сообщения
+-keep,allowshrinking,includedescriptorclasses class android.** { *; }
+-keep,allowshrinking,includedescriptorclasses class androidx.** { *; }
+-keep,allowshrinking,includedescriptorclasses class com.google.** { *; }
+-keep,allowshrinking,includedescriptorclasses class kotlinx.coroutines.** { *; }
+-keep,allowshrinking,includedescriptorclasses class okhttp3.** { *; }
+-keep,allowshrinking,includedescriptorclasses class kotlin.** { *; }
+-keep,allowshrinking,includedescriptorclasses class com.nostra13.universalimageloader.** { *; }
+-keep,allowshrinking,includedescriptorclasses class com.davemorrissey.labs.** { *; }
+-keep,allowshrinking,includedescriptorclasses class org.jsoup.** { *; }
+-keep,allowshrinking,includedescriptorclasses class com.soundcloud.android.** { *; }
+-keep,allowshrinking,includedescriptorclasses class com.getkeepsafe.taptargetview.** { *; }
+-keep,allowshrinking,includedescriptorclasses class info.guardianproject.** { *; }
+
+# проект
+#-dontobfuscate
+-keep,includedescriptorclasses class org.nv95.openmanga.** { *; }
+
+-keep @JvmOverloads class * {
+  <init>(...);
+  *;
+}
 
 # [custom rules begin]
 -verbose
@@ -63,49 +101,10 @@
 -keepclassmembers class * implements android.os.Parcelable {*;}
 -keep class * implements android.os.Parcelable {*;}
 -keepnames class * implements android.os.Parcelable {*;}
-# [custom rules end]
-
-
-
--keepclassmembernames class kotlinx.** {
-    volatile <fields>;
-}
-
--keep class kotlin.reflect.jvm.internal.ReflectionFactoryImpl { *; }
-# gson
--keepattributes *Annotation*
-
--keepclasseswithmembernames class * {
-    native <methods>;
-}
--keepclassmembers,allowobfuscation class * {
-  @com.google.gson.annotations.SerializedName <fields>;
-}
-
-# Нужно чтобы библиотечные методы не были обфусцированы
-# Только удаление не используемого кода
-# так же поправлены большинство note сообщения
--keep,allowshrinking,includedescriptorclasses class android.** { *; }
--keep,allowshrinking,includedescriptorclasses class androidx.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.google.** { *; }
--keep,allowshrinking,includedescriptorclasses class kotlinx.coroutines.** { *; }
--keep,allowshrinking,includedescriptorclasses class okhttp3.** { *; }
--keep,allowshrinking,includedescriptorclasses class kotlin.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.nostra13.universalimageloader.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.davemorrissey.labs.** { *; }
--keep,allowshrinking,includedescriptorclasses class org.jsoup.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.soundcloud.android.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.getkeepsafe.taptargetview.** { *; }
--keep,allowshrinking,includedescriptorclasses class info.guardianproject.** { *; }
-
-# проект
-#-dontobfuscate
-#-keep,includedescriptorclasses class org.nv95.openmanga.** { *; }
 
 -keep @JvmOverloads class * {
   <init>(...);
   *;
 }
 
-
-
+# [custom rules end]

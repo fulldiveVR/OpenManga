@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.delta.brash.libmanga">
+package="com.pacifist.carlisle.libmanga">
     <application>
 <activity
-android:name = "org.nv95.openmanga.feature.welcome.AdageTurvyActivity"
+android:name = "org.nv95.openmanga.feature.download.GuffawSightseerActivity"
 android:exported="false"
-android:label="@string/panicked_mimeograph_smut_wail"
-android:launchMode="singleTop"
-android:windowSoftInputMode="adjustUnspecified"
+android:label="@string/acme_gastronomic_ywca_starring"
+android:windowSoftInputMode="adjustPan"
 />
 
     </application>
