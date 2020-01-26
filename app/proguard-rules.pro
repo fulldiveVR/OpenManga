@@ -35,25 +35,29 @@
   @com.google.gson.annotations.SerializedName <fields>;
 }
 
-# Нужно чтобы библиотечные методы не были обфусцированы
-# Только удаление не используемого кода
-# так же поправлены большинство note сообщения
--keep,allowshrinking,includedescriptorclasses class android.** { *; }
--keep,allowshrinking,includedescriptorclasses class androidx.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.google.** { *; }
--keep,allowshrinking,includedescriptorclasses class kotlinx.coroutines.** { *; }
--keep,allowshrinking,includedescriptorclasses class okhttp3.** { *; }
--keep,allowshrinking,includedescriptorclasses class kotlin.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.nostra13.universalimageloader.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.davemorrissey.labs.** { *; }
--keep,allowshrinking,includedescriptorclasses class org.jsoup.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.soundcloud.android.** { *; }
--keep,allowshrinking,includedescriptorclasses class com.getkeepsafe.taptargetview.** { *; }
--keep,allowshrinking,includedescriptorclasses class info.guardianproject.** { *; }
+# fix
+-keep class android.** { *; }
+-keep class androidx.** { *; }
+-keep class com.google.** { *; }
+-keep class kotlinx.coroutines.** { *; }
+-keep class okhttp3.** { *; }
+-keep class kotlin.** { *; }
+-keep class com.nostra13.universalimageloader.** { *; }
+-keep class com.davemorrissey.labs.** { *; }
+-keep class org.jsoup.** { *; }
+-keep class com.soundcloud.android.** { *; }
+-keep class com.getkeepsafe.taptargetview.** { *; }
+-keep class info.guardianproject.** { *; }
 
-# проект
-#-dontobfuscate
-#-keep,includedescriptorclasses class org.nv95.openmanga.** { *; }
+#-keep class org.nv95.openmanga.** { *; }
+-keep class org.nv95.openmanga.providers.** { *; }
+-keep class org.nv95.openmanga.components.** { *; }
+-keep class org.nv95.openmanga.core.** { *; }
+-keep class org.nv95.openmanga.di.** { *; }
+-keep class org.nv95.openmanga.dialogs.** { *; }
+-keep class org.nv95.openmanga.feature.** { *; }
+-keep class org.nv95.openmanga.helpers.** { *; }
+-keep class org.nv95.openmanga.services.** { *; }
 
 -keep @JvmOverloads class * {
   <init>(...);

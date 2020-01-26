@@ -3,14 +3,15 @@ package org.nv95.openmanga.providers;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
 import androidx.annotation.Nullable;
 import androidx.annotation.WorkerThread;
 
 import org.nv95.openmanga.R;
+import org.nv95.openmanga.feature.manga.domain.MangaInfo;
 import org.nv95.openmanga.helpers.StorageHelper;
 import org.nv95.openmanga.items.LocalMangaInfo;
 import org.nv95.openmanga.items.MangaChapter;
-import org.nv95.openmanga.feature.manga.domain.MangaInfo;
 import org.nv95.openmanga.items.MangaPage;
 import org.nv95.openmanga.items.MangaSummary;
 import org.nv95.openmanga.lists.ChaptersList;
