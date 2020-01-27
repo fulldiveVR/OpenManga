@@ -81,17 +81,17 @@ public class OtherSettingsFragment extends PreferenceFragment {
 
         findPreference("bugreport").setOnPreferenceClickListener((Preference.OnPreferenceClickListener) activity);
 
-        p = findPreference("update");
-        if (BuildConfig.SELFUPDATE_ENABLED) {
-            p.setOnPreferenceClickListener((Preference.OnPreferenceClickListener) activity);
-            long lastCheck = new ScheduleHelper(activity).getActionRawTime(ScheduleHelper.ACTION_CHECK_APP_UPDATES);
-            p.setSummary(getString(R.string.last_update_check,
-                    lastCheck == -1 ? getString(R.string.unknown) : AppHelper.getReadableDateTimeRelative(lastCheck)));
-        } else if (p != null) {
-            PreferenceCategory cat = (PreferenceCategory) findPreference("cat_help");
-            cat.removePreference(p);
-            cat.removePreference(findPreference("autoupdate"));
-        }
+//        p = findPreference("update");
+//        if (BuildConfig.SELFUPDATE_ENABLED) {
+//            p.setOnPreferenceClickListener((Preference.OnPreferenceClickListener) activity);
+//            long lastCheck = new ScheduleHelper(activity).getActionRawTime(ScheduleHelper.ACTION_CHECK_APP_UPDATES);
+//            p.setSummary(getString(R.string.last_update_check,
+//                    lastCheck == -1 ? getString(R.string.unknown) : AppHelper.getReadableDateTimeRelative(lastCheck)));
+//        } else if (p != null) {
+//            PreferenceCategory cat = (PreferenceCategory) findPreference("cat_help");
+//            cat.removePreference(p);
+//            cat.removePreference(findPreference("autoupdate"));
+//        }
 
         p = findPreference("about");
         p.setOnPreferenceClickListener((Preference.OnPreferenceClickListener) activity);

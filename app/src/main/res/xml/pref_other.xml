@@ -62,9 +62,9 @@
         android:key="cat_help"
         android:title="@string/help">
 
-        <Preference
-            android:key="update"
-            android:title="@string/check_updates" />
+<!--        <Preference-->
+<!--            android:key="update"-->
+<!--            android:title="@string/check_updates" />-->
 
         <Preference
             android:key="bugreport"
